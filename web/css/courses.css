@@ -1,0 +1,138 @@
+﻿/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar li {
+        margin: 0 15px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+    }
+
+        .navbar a:hover {
+            color: #00ff88;
+        }
+
+/* Form Container */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 600px;
+    margin-top: 80px; /* To account for the fixed navbar */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Dropdown List Styles */
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Black border */
+    border-radius: 10px;
+    background: #fff; /* White background */
+    color: #000; /* Black text color */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none; /* Remove default arrow for Safari */
+    -moz-appearance: none; /* Remove default arrow for Firefox */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom black arrow */
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+    select:focus {
+        border-color: #00ff88; /* Green border on focus */
+        box-shadow: 0 0 8px rgba(0, 255, 136, 0.3); /* Subtle glow effect */
+        outline: none;
+    }
+
+    /* Dropdown Options */
+    select option {
+        background: #fff; /* White background for options */
+        color: #000; /* Black text color */
+    }
+/* Enroll Button Styles */
+.btn {
+    background: linear-gradient(135deg, #007bff, #00ff88);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+    .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    form {
+        padding: 20px;
+    }
+}

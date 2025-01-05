@@ -1,0 +1,195 @@
+﻿/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+    .shape:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        top: -50px;
+        left: -50px;
+    }
+
+    .shape:nth-child(2) {
+        width: 300px;
+        height: 300px;
+        bottom: -100px;
+        right: -100px;
+    }
+
+/* Form Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 320px; /* Slightly smaller width */
+    max-width: 90%;
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+    text-align: center; /* Center all text */
+}
+
+    .form-container h1 {
+        margin-bottom: 15px;
+        color: #333;
+        font-size: 22px; /* Smaller heading */
+    }
+
+/* Form Toggle Buttons */
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+    .form-toggle button {
+        background: none;
+        border: none;
+        padding: 6px 20px; /* Normal padding */
+        cursor: pointer;
+        font-size: 14px; /* Normal font size */
+        color: #333;
+        transition: color 0.3s ease;
+        margin: 0 5px; /* Space between buttons */
+    }
+
+        .form-toggle button.active {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+        }
+
+/* Form Wrapper */
+.form-wrapper {
+    display: flex;
+    width: 200%; /* Twice the width of the form container */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Each Form */
+.form {
+    width: 50%; /* Each form takes exactly half of the wrapper */
+    padding: 10px;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Prevent forms from shrinking */
+}
+
+/* Input Fields */
+.input-field {
+    width: calc(100% - 16px); /* Account for padding */
+    padding: 12px; /* Larger padding for better spacing */
+    margin: 12px 0; /* Increased margin for better spacing */
+    border: 2px solid transparent; /* Transparent border for gradient effect */
+    border-radius: 12px; /* Rounded corners */
+    font-size: 14px; /* Slightly larger font for better readability */
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Light background color */
+    transition: all 0.3s ease; /* Smooth transitions for all properties */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+    .input-field:focus {
+        border-color: #007bff; /* Highlight border on focus */
+        outline: none; /* Remove default outline */
+        box-shadow: 0 0 12px rgba(0, 123, 255, 0.4); /* Glow effect on focus */
+        background-color: #fff; /* Change background on focus */
+        transform: scale(1.02); /* Slight scale-up effect */
+    }
+
+    /* Gradient Border Effect */
+    .input-field.gradient-border {
+        position: relative;
+        background-clip: padding-box; /* Ensure background doesn't overlap border */
+        border: 2px solid transparent; /* Transparent border for gradient */
+        border-radius: 12px;
+    }
+
+        .input-field.gradient-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #007bff, #00ff88); /* Gradient border */
+            border-radius: 12px;
+            z-index: -1; /* Place behind the input field */
+        }
+
+    /* Neumorphic Style */
+    .input-field.neumorphic {
+        border: none;
+        background: #f9f9f9;
+        box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.7);
+    }
+
+        .input-field.neumorphic:focus {
+            box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+        }
+
+    /* Glassmorphism Style */
+    .input-field.glassmorphism {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px); /* Blur effect for glass-like appearance */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .input-field.glassmorphism:focus {
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+        }
+
+/* Labels */
+.form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px; /* Smaller font */
+    color: #333;
+}
+
+/* Buttons */
+.btn {
+    width: auto; /* Let the button size adjust to its content */
+    padding: 5px 20px; /* Smaller padding (top/bottom: 5px, left/right: 20px) */
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px; /* Smaller font */
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+    .btn:hover {
+        background: #0056b3;
+    }
+
+/* Slide Animation */
+.form-wrapper.slide-left {
+    transform: translateX(-50%);
+}
