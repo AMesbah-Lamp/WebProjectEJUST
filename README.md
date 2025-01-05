@@ -63,23 +63,4 @@ EJUST University for providing the opportunity to work on this project.
 
 GitHub for hosting this repository.
 
-Thank you for visiting WebProjectEJUST! 🎉 Let's build something amazing together! 🚀   
-
----
-
-### **How to Update Your README.md**
-1. Go to your repository on GitHub: [WebProjectEJUST](https://github.com/AMesbah-Lamp/WebProjectEJUST).
-2. Open the `README.md` file.
-3. Click the **Edit** button (pencil icon).
-4. Replace the existing content with the updated template above.
-5. Scroll down and click **Commit changes**.
-
----
-
-### **Optional: Add Badges**
-If you want to add badges to your README, include the following at the top of the file:
-
-```markdown
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![GitHub Stars](https://img.shields.io/github/stars/AMesbah-Lamp/WebProjectEJUST?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/AMesbah-Lamp/WebProjectEJUST?style=social)
+Thank you for visiting WebProjectEJUST! 🎉 Let's build something amazing together! 🚀
