@@ -46,6 +46,7 @@ To set up this project locally, follow these steps:
    <connectionStrings>
        <add name="MyConnectionString" connectionString="YourConnectionStringHere" providerName="System.Data.SqlClient" />
          </connectionStrings>
+ ```
 3.**Run the Project:**
    Open the project in Visual Studio.
    Build and run the project.
